@@ -1,5 +1,6 @@
 package Q7;
 
+import javax.swing.*;
 import java.util.GregorianCalendar;
 
 public class Main {
@@ -18,6 +19,10 @@ public class Main {
         }
 
         String time = hour + ":"+ minute + ":" + second+ " " + isAMOrPm;
-        System.out.println(time);
+
+        JFrame myWindow = new JFrame();
+        myWindow.setSize(400,400);
+        myWindow.setTitle(time);
+        myWindow.setVisible(true);
     }
 }
