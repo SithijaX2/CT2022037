@@ -18,16 +18,21 @@ public class Main {
         for (int i = 0; i < text.length(); i++) {
             char nowChar = text.charAt(i);
             if(nowChar == '!'){
-                text_1_Length = i+1;
+                text_1_Length = i;
                 break;
             }
         }
+        if(text_1_Length==-1){
+            System.out.println("Your text haven't a '!'.");
+        }else {
+            text_1 = text.substring(0,text_1_Length);
+            text_2 = text.substring(text_1_Length+1, text_length);
 
-        text_1 = text.substring(0,text_1_Length);
-        text_2 = text.substring(text_1_Length, text_length);
+
+            System.out.println(text_1 + "\n" + text_2);
+        }
 
 
-        System.out.println(text_1 + "\n" + text_2);
 
     }
 }
